@@ -1,4 +1,5 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom"
+// Importing components from react-router-dom for navigation
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
@@ -7,22 +8,12 @@ export default function Navbar() {
         Site Name
       </Link>
       <ul>
-        <CustomLink to="/pricing">Pricing</CustomLink>
-        <CustomLink to="/about">About</CustomLink>
+        <Link to="/pricing">Pricing</Link>
+        <Link to="/about">About</Link>
+
+        {/* <a href="/pricing">Pricing</a>
+        <a href="/about">About</a> */}
       </ul>
     </nav>
-  )
-}
-
-function CustomLink({ to, children, ...props }) {
-  const resolvedPath = useResolvedPath(to)
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true })
-
-  return (
-    <li className={isActive ? "active" : ""}>
-      <Link to={to} {...props}>
-        {children}
-      </Link>
-    </li>
-  )
+  );
 }

@@ -1,8 +1,9 @@
-import Navbar from "./Navbar"
-import Pricing from "./pages/Pricing"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import { Route, Routes } from "react-router-dom"
+import Navbar from './Navbar';
+import Pricing from './pages/Pricing';
+import Home from './pages/Home';
+import About from './pages/About';
+// again, this enables us to move between different routes.
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         </Routes>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
